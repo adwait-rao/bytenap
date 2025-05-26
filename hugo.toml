@@ -29,10 +29,6 @@ enableRobotsTXT = true
     contentDir = "content"
 
     [menu]
-      [[menu.main]]
-        identifier = "home"
-        name = "Home"
-        url = "/"
 
       [[menu.main]]
         identifier = "about"
@@ -54,7 +50,7 @@ enableRobotsTXT = true
 
 [params]
   # The description of your website
-  description = "Bear Cub Demo"
+  description = "Adwait Rao's journal on internet"
 
   # The path to your favicon
   favicon = "images/favicon.png"
