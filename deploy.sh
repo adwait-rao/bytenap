@@ -6,24 +6,17 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
 # Base paths
-sourceBase="/home/adwaitrao/Documents/adwait-notes/blog"
+sourceBase="/home/adwaitrao/Documents/adwait-notes/blog/"
 destinationBase="/home/adwaitrao/Documents/bytenap/content"
 
-# Directories to sync
-declare -a directories=("posts" "projects")
-
-# SSH GitHub repo URL
+# Git SSH remote
 remote_url="git@github.com:adwait-rao/bytenap.git"
 
-# Check for required commands
-for cmd in git rsync python3; do
-    if ! command -v $cmd &> /dev/null; then
-        echo "$cmd is not installed or not in PATH."
-        exit 1
-    fi
-done
+# Directories and files to sync
+declare -a directories=("posts" "projects")
+declare -a root_files=("_index.md" "about/index.md")
 
-# Git setup if needed
+# Ensure Git is initialized and remote set
 if [ ! -d ".git" ]; then
     echo "Initializing Git repository..."
     git init
@@ -35,32 +28,42 @@ else
     fi
 fi
 
-# Sync Markdown content from Obsidian to Hugo
+# Sync content directories (posts, projects)
 for dir in "${directories[@]}"; do
     src="$sourceBase/$dir"
     dest="$destinationBase/$dir"
 
-    echo "Syncing $dir..."
+    echo "Syncing directory: $dir"
     mkdir -p "$dest"
     rsync -av --delete "$src/" "$dest/"
 done
 
-# Process Markdown image links and copy images
-echo "Running image processor..."
+# Sync specific root-level content files (_index.md, about/index.md)
+for file in "${root_files[@]}"; do
+    src="$sourceBase/$file"
+    dest="$destinationBase/$file"
+
+    echo "Syncing file: $file"
+    mkdir -p "$(dirname "$dest")"
+    cp "$src" "$dest"
+done
+
+# Run image processor
+echo "Running image link processor..."
 if ! python3 images.py; then
     echo "Image processing failed."
     exit 1
 fi
 
 # Stage, commit, and push changes
-echo "Staging and committing changes..."
+echo "Staging and pushing changes..."
 if git diff --quiet && git diff --cached --quiet; then
     echo "No changes to commit."
 else
     git add .
-    git commit -m "Content update on $(date +'%Y-%m-%d %H:%M:%S')"
+    git commit -m "Sync content and update on $(date +'%Y-%m-%d %H:%M:%S')"
     git push origin main
 fi
 
-echo "✅ All done! Synced, processed, committed, and pushed to GitHub via SSH."
+echo "✅ Deploy complete — content synced and pushed."
 
