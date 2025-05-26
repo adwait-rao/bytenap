@@ -14,7 +14,7 @@ remote_url="git@github.com:adwait-rao/bytenap.git"
 
 # Directories and files to sync
 declare -a directories=("posts" "projects")
-declare -a root_files=("_index.md" "about/_index.md")
+declare -a root_files=("_index.md" "about.md")
 
 # Ensure Git is initialized and remote set
 if [ ! -d ".git" ]; then
