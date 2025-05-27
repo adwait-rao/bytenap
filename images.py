@@ -7,37 +7,52 @@ base_content_dir = "/home/adwaitrao/Documents/bytenap/content"
 attachments_dir = "/home/adwaitrao/Documents/adwait-notes/assets"
 static_images_dir = "/home/adwaitrao/Documents/bytenap/static/images"
 
-# Directories to process
+# Directories and files to process
 markdown_dirs = [
-    os.path.join(base_content_dir, "posts"),
-    os.path.join(base_content_dir, "projects")
+    os.path.join(base_content_dir, "posts"),  # directory
 ]
 
-# Function to process markdown files in a given directory
-def process_markdown_files(directory):
-    for filename in os.listdir(directory):
-        if filename.endswith(".md"):
-            filepath = os.path.join(directory, filename)
-            
-            with open(filepath, "r") as file:
-                content = file.read()
-            
-            # Find all image links in the format [[image.png]]
-            images = re.findall(r'\[\[([^]]*\.png)\]\]', content)
-            
-            for image in images:
-                markdown_image = f"![Image Description](/images/{image.replace(' ', '%20')})"
-                content = content.replace(f"[[{image}]]", markdown_image)
-                
-                image_source = os.path.join(attachments_dir, image)
-                if os.path.exists(image_source):
-                    shutil.copy(image_source, static_images_dir)
+markdown_files = [
+    os.path.join(base_content_dir, "projects.md"),
+    os.path.join(base_content_dir, "about.md"),
+    os.path.join(base_content_dir, "_index.md"),
+]
 
-            with open(filepath, "w") as file:
-                file.write(content)
+# Function to process a single markdown file
+def process_markdown_file(filepath):
+    print(f"Processing: {filepath}")
+    
+    with open(filepath, "r") as file:
+        content = file.read()
 
-# Process all markdown directories
-for md_dir in markdown_dirs:
-    process_markdown_files(md_dir)
+    # Match [[image.png]]
+    images = re.findall(r'\[\[([^]]*\.png)\]\]', content)
 
-print("Markdown files in 'posts' and 'projects' processed and images copied successfully.")
+    for image in images:
+        markdown_image = f"![Image Description](/images/{image.replace(' ', '%20')})"
+        content = content.replace(f"[[{image}]]", markdown_image)
+
+        image_source = os.path.join(attachments_dir, image)
+        if os.path.exists(image_source):
+            shutil.copy(image_source, static_images_dir)
+            print(f"Copied image: {image}")
+        else:
+            print(f"⚠️ Image not found: {image_source}")
+
+    with open(filepath, "w") as file:
+        file.write(content)
+
+# Process markdown directories
+for directory in markdown_dirs:
+    if os.path.isdir(directory):
+        for filename in os.listdir(directory):
+            if filename.endswith(".md"):
+                process_markdown_file(os.path.join(directory, filename))
+
+# Process standalone markdown files
+for filepath in markdown_files:
+    if os.path.isfile(filepath):
+        process_markdown_file(filepath)
+
+print("✅ Markdown processing complete — images copied and links updated.")
+
