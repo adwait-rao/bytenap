@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ByteNap</title>
+    <title>Home on ByteNap</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on ByteNap</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Home on ByteNap</description>
+    <generator>Hugo</generator>
     <language>en-US</language>
     <managingEditor>adwaitrao7000@gmail.com (Adwait Rao)</managingEditor>
     <webMaster>adwaitrao7000@gmail.com (Adwait Rao)</webMaster>
@@ -17,15 +17,6 @@
       <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate><author>adwaitrao7000@gmail.com (Adwait Rao)</author>
       <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m a third-year 🎓 Computer Science student based in Pune. I enjoy experimenting 🧪 with technology, building things 🛠️, and learning by doing.&lt;/p&gt;&#xA;&lt;p&gt;Right now, I&amp;rsquo;m focused on:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;⚙️ Go for backend development&lt;/li&gt;&#xA;&lt;li&gt;📱 TypeScript and React Native for mobile apps&lt;/li&gt;&#xA;&lt;li&gt;🌐 Distributed systems and how large-scale software works behind the scenes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This site is where I share what I’m learning, thinking about, or building 🚧.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>I&rsquo;m a third-year 🎓 Computer Science student based in Pune. I enjoy experimenting 🧪 with technology, building things 🛠️, and learning by doing.</p>
-<p>Right now, I&rsquo;m focused on:</p>
-<ul>
-<li>⚙️ Go for backend development</li>
-<li>📱 TypeScript and React Native for mobile apps</li>
-<li>🌐 Distributed systems and how large-scale software works behind the scenes</li>
-</ul>
-<p>This site is where I share what I’m learning, thinking about, or building 🚧.</p>
-]]></content:encoded>
     </item>
     <item>
       <title>Projects</title>
@@ -33,8 +24,6 @@
       <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate><author>adwaitrao7000@gmail.com (Adwait Rao)</author>
       <guid>http://localhost:1313/projects/</guid>
       <description>&lt;p&gt;hello&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>hello</p>
-]]></content:encoded>
     </item>
     <item>
       <title>First Blog</title>
@@ -42,9 +31,6 @@
       <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate><author>adwaitrao7000@gmail.com (Adwait Rao)</author>
       <guid>http://localhost:1313/posts/first-blog-hahah/</guid>
       <description>&lt;p&gt;Random text goes brrrr&#xA;!&lt;img src=&#34;http://localhost:1313/images/Pasted%20image%2020250527002435.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>Random text goes brrrr
-!<img src="/images/Pasted%20image%2020250527002435.png" alt="Image Description"></p>
-]]></content:encoded>
     </item>
   </channel>
 </rss>
