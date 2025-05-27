@@ -30,7 +30,7 @@
       <link>http://localhost:1313/posts/first-blog-hahah/</link>
       <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate><author>adwaitrao7000@gmail.com (Adwait Rao)</author>
       <guid>http://localhost:1313/posts/first-blog-hahah/</guid>
-      <description>&lt;p&gt;Random text goes brrrr&#xA;!&lt;img src=&#34;http://localhost:1313/images/Pasted%20image%2020250527002435.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Random text goes brrrr&#xA;![[Pasted image 20250527002435.png]]&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
