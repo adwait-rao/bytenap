@@ -38,7 +38,7 @@ enableRobotsTXT = true
       [[menu.main]]
         identifier = "about"
         name = "About"
-        url = "/about/"
+        url = "/about"
 
       [[menu.main]]
           identifier = "posts"
@@ -48,7 +48,7 @@ enableRobotsTXT = true
       [[menu.main]]
           identifier = "projects"
           name = "Projects"
-          url = "/projects/"
+          url = "/projects"
 
     [languages.en.params]
       madeWith = "Hugo"
