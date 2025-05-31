@@ -6,29 +6,27 @@
     <description>Recent content in Home on ByteNap</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <managingEditor>adwaitrao7000@gmail.com (Adwait Rao)</managingEditor>
-    <webMaster>adwaitrao7000@gmail.com (Adwait Rao)</webMaster>
     <copyright>Adwait Rao</copyright>
     <lastBuildDate>Tue, 27 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>http://localhost:1313/about/</link>
-      <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate><author>adwaitrao7000@gmail.com (Adwait Rao)</author>
+      <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m a third-year 🎓 Computer Science student based in Pune. I enjoy experimenting 🧪 with technology, building things 🛠️, and learning by doing.&lt;/p&gt;&#xA;&lt;p&gt;Right now, I&amp;rsquo;m focused on:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;⚙️ Go for backend development&lt;/li&gt;&#xA;&lt;li&gt;📱 TypeScript and React Native for mobile apps&lt;/li&gt;&#xA;&lt;li&gt;🌐 Distributed systems and how large-scale software works behind the scenes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This site is where I share what I’m learning, thinking about, or building 🚧.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Projects</title>
       <link>http://localhost:1313/projects/</link>
-      <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate><author>adwaitrao7000@gmail.com (Adwait Rao)</author>
+      <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/</guid>
       <description>&lt;p&gt;hello&lt;/p&gt;</description>
     </item>
     <item>
       <title>First Blog</title>
       <link>http://localhost:1313/posts/first-blog-hahah/</link>
-      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate><author>adwaitrao7000@gmail.com (Adwait Rao)</author>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/first-blog-hahah/</guid>
       <description>&lt;p&gt;Random text goes brrrr&#xA;!&lt;img src=&#34;http://localhost:1313/images/Pasted%20image%2020250527002435.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
     </item>

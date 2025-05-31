@@ -1,6 +1,6 @@
 # Basic config
 baseURL = "https://bytenap.netlify.app"
-theme = "hugo-bearcub"
+theme = "paper"
 copyright = "Adwait Rao"
 defaultContentLanguage = "en"
 
@@ -29,11 +29,6 @@ enableRobotsTXT = true
     contentDir = "content"
 
     [menu]
-      [[menu.main]]
-        identifier = "home"
-        name = "Home"
-        url = "/"
-        weight = 1
 
       [[menu.main]]
         identifier = "about"
@@ -54,55 +49,41 @@ enableRobotsTXT = true
       madeWith = "Hugo"
 
 [params]
-  # The description of your website
-  description = "Adwait Rao's journal on internet"
-  copyright = '© 2025 Adwait Rao'
+  # color style
+  color = 'wheat'                           # linen, wheat, gray, light
+
+  # header social icons
+  twitter = 'adwaitwt'               # twitter.com/YOUR_TWITTER_ID
+  github = 'adwait-rao'                 # github.com/YOUR_GITHUB_ID
+  # linkedin = 'YOUR_LINKEDIN_ID'             # linkedin.com/in/YOUR_LINKEDIN_ID
+  bluesky = 'adwaitrao.bsky.social'               # https://bsky.app/profile/YOUR_BLUESKY_ID
+  # rss = true                                # show rss icon
+
+  # home page profile
+  avatar = '/assets/adwait-img.jpeg'                 # gravatar email or image url
+  name = 'Adwait Rao'
+  bio = 'Building Performant backend systems with golang and Typescript'
 
 
-  # The path to your favicon
-  favicon = "images/favicon.png"
+  # misc
+  disableHLJS = false                        # disable highlight.js
+  disablePostNavigation = true              # disable post navigation
+  monoDarkIcon = true                       # show monochrome dark mode icon
+  gravatarCdn = 'GRAVATAR_CDN_LINK'         # e.g. 'https://cdn.v2ex.com/gravatar/'
+  math = true                               # enable KaTeX math typesetting globally
+  localKatex = false                        # use local KaTeX js/css instead of CDN
+  favicon = "favicon.ico"                   # customize the default favicon
+  appleTouchIcon = "apple-touch-icon.png"   # customize the default Apple touch icon
 
-  # These images will show up when services want to generate a preview of a link
-  # to your site. Ignored if `generateSocialCard = true`. For more information
-  # about previews, see https://gohugo.io/templates/internal#twitter-cards and
-  # https://gohugo.io/templates/internal#open-graph
-  images = ["images/share.webp"]
+  # RTL supprot
+  # direction = "rtl"                         # RTL support for Right-to-left languages
 
-  # This title is used as the site_name on the Hugo's internal opengraph
-  # structured data template
-  title = "ByteNap Blog"
-
-  # Dates are displayed following the format below. For more information about
-  # formatting, see https://gohugo.io/functions/format/
-  dateFormat = "2006-01-02"
-
-  # If your blog is multilingual but you haven't translated a page, this theme
-  # will create a disabled link. By setting `hideUntranslated` to true, you can
-  # have the theme simply not show any link
-  hideUntranslated = false
-
-  # (EXPERIMENTAL) This theme has two options for its CSS styles: "original" and
-  # "herman". The former is what you see on Bear Cub's demo (an optimized
-  # version of Hugo Bear Blog), while the latter has a more modern look based on
-  # Herman Martinus's version of the Blogster Minimal theme for Astro.
-  themeStyle = "original"
-
-  # (EXPERIMENTAL) This theme is capable of dynamically generating social cards
-  # for posts that don't have `images` defined in their front matter; By setting
-  # `generateSocialCard` to false, you can prevent this behavior. For more
-  # information see layouts/partials/social_card.html
-  generateSocialCard = true
-
-  # Social media. Delete any item you aren't using to make sure it won't show up
-  # in your website's metadata.
-  [params.social]
-    twitter = "adwaitwt" # Twitter handle (without '@')
-    facebook_admin = "0000000000" # Facebook Page Admin ID
-
-  # Author metadata. This is mostly used for the RSS feed of your site, but the
-  # email is also added to the footer of each post. You can hide the "reply to"
-  # link by using a `hideReply` param in front matter.
-  [params.author]
-    name = "Adwait Rao" # Your name as shown in the RSS feed metadata
-    email = "adwaitrao7000@gmail.com" # Added to the footer so readers can reply to posts
-    
+#   # giscus
+# [params.giscus]
+#   repo = 'YOUR_GISCUS_REPO'                 # see https://giscus.app for more details
+#   repoId = 'YOUR_GISCUS_REPO_ID'
+#   category = 'YOUR__GISCUS_CATEGORY'
+#   categoryId = 'YOUR_GISCUS_CATEGORY_ID'
+#   mapping = 'pathname'
+#   theme = 'light'
+#   lang = 'zh-CN'
