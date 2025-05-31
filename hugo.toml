@@ -60,7 +60,7 @@ enableRobotsTXT = true
   # rss = true                                # show rss icon
 
   # home page profile
-  avatar = '/assets/adwait-img.jpeg'                 # gravatar email or image url
+  avatar = 'https://raw.githubusercontent.com/adwait-rao/bytenap/refs/heads/main/assets/adwait-img.jpeg'                 # gravatar email or image url
   name = 'Adwait Rao'
   bio = 'Building Performant backend systems with golang and Typescript'
 
